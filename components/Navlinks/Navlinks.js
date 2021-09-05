@@ -10,14 +10,14 @@ import {
 import navlinks from '../../constants/navlinks';
 import Button from '../Button/Button';
 
-const Navlinks = () => {
+const Navlinks = ({ openSideNavbar }) => {
   return (
     <>
       <MenuButton>
         <SearchIcon>
           <BiSearchAlt2 />
         </SearchIcon>
-        <Button>
+        <Button onClick={openSideNavbar}>
           Menu
         </Button>
       </MenuButton>

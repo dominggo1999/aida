@@ -33,7 +33,7 @@ export const MenuButton = styled.div`
   `}
 `;
 
-export const SearchIcon = styled.div`
+export const SearchIcon = styled.button`
   ${tw`
     cursor-pointer
     flex 
