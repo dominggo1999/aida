@@ -6,6 +6,7 @@ export const NavbarWrapper = styled.div`
     w-full
     py-5
     justify-center
+    fixed
   `}
 `;
 

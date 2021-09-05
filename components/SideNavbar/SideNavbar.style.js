@@ -15,8 +15,10 @@ export const SideNavbarWrapper = styled.ul`
     p-10
     w-full
     sm:w-72
+    overflow-auto
   `}
 
+  min-height: 300px;
   z-index: 999;
   transform: ${(props) => (props.open ? 'translateX(0)' : 'translateX(100%)')};
 `;
