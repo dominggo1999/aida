@@ -1,11 +1,10 @@
 import tw from 'twin.macro';
+import Navbar from '../components/Navbar/Navbar';
 
-const index = () => {
+const Homepage = () => {
   return (
-    <div tw="bg-black w-full h-screen text-4xl flex flex-col justify-center items-center text-white">
-      Hellow
-    </div>
+    <div></div>
   );
 };
 
-export default index;
+export default Homepage;
