@@ -7,7 +7,12 @@ export const NavbarWrapper = styled.div`
     py-5
     justify-center
     fixed
+    top-0
+    left-0
   `}
+
+  transform: ${(props) => (props.showNavbar ? 'translateY(0)' : 'translateY(-100%)')};
+  transition : transform ease 300ms;
 `;
 
 export const NavLogo = styled.a`

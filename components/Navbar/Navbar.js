@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Container from '../Wrapper/Container';
 import {
@@ -12,6 +12,8 @@ import tailwindBreakpoints from '../../constants/tailwindBreakpoint';
 
 const Navbar = () => {
   const [showSideNavbar, setShowSideNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [prevScroll, setPrevScroll] = useState(0);
 
   const openSideNavbar = () => {
     setShowSideNavbar(true);
@@ -22,6 +24,22 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    let pScroll = prevScroll;
+    const toggleNavbarOnScroll = (e) => {
+      const currentScroll = window.pageYOffset;
+
+      if(currentScroll <= pScroll) {
+        setShowNavbar(true);
+      }
+
+      if(currentScroll > pScroll) {
+        setShowNavbar(false);
+      }
+
+      pScroll = currentScroll;
+      setPrevScroll(pScroll);
+    };
+
     const closeSidebarOnLargeScreen = (e) => {
       if(window.innerWidth >= tailwindBreakpoints.sm) {
         closeSideNavbar();
@@ -29,37 +47,41 @@ const Navbar = () => {
     };
 
     window.addEventListener('resize', closeSidebarOnLargeScreen);
+    window.addEventListener('scroll', toggleNavbarOnScroll);
 
     return () => {
       window.removeEventListener('resize', closeSidebarOnLargeScreen);
+      window.removeEventListener('scroll', toggleNavbarOnScroll);
     };
   }, []);
 
   return (
-    <NavbarWrapper>
-      <Container>
-        <NavbarFlex>
-          <Link href="/">
-            <NavLogo>
-              aida.
-            </NavLogo>
-          </Link>
-          <Navlinks openSideNavbar={openSideNavbar} />
+    <>
+      {/* Backdrop and sidebar only shown if showSideNavbar is true */}
+      {showSideNavbar && (
+      <Backdrop
+        handleClose={closeSideNavbar}
+        open={showSideNavbar}
+      />
+      )}
+      <SideNavbar
+        handleClose={closeSideNavbar}
+        open={showSideNavbar}
+      />
 
-          {/* Backdrop and sidebar only shown if showSideNavbar is true */}
-          {showSideNavbar && (
-            <Backdrop
-              handleClose={closeSideNavbar}
-              open={showSideNavbar}
-            />
-          )}
-          <SideNavbar
-            handleClose={closeSideNavbar}
-            open={showSideNavbar}
-          />
-        </NavbarFlex>
-      </Container>
-    </NavbarWrapper>
+      <NavbarWrapper showNavbar={showNavbar}>
+        <Container>
+          <NavbarFlex>
+            <Link href="/">
+              <NavLogo>
+                aida.
+              </NavLogo>
+            </Link>
+            <Navlinks openSideNavbar={openSideNavbar} />
+          </NavbarFlex>
+        </Container>
+      </NavbarWrapper>
+    </>
   );
 };
 
