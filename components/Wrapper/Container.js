@@ -5,12 +5,12 @@ const Container = styled.div`
     flex 
     flex-col 
     w-full
-    mx-5
-    sm:mx-20
-    lg:mx-44
+    px-5
+    sm:px-10
+    lg:px-32
   `}
 
-  max-width: 1200px;
+  max-width: 1400px;
 `;
 
 export default Container;

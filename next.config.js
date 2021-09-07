@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
   images: {
-    domains: ['images.ctfassets.net'],
+    domains: ['images.ctfassets.net', 'images.pexels.com'],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

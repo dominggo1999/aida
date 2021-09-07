@@ -1,12 +1,11 @@
 import tw from 'twin.macro';
-import Navbar from '../components/Navbar/Navbar';
-import Backdrop from '../components/Backdrop/Backdrop';
+import BigBanner from '../components/BigBanner/BigBanner';
 
 const Homepage = () => {
   return (
-    <div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    </div>
+    <>
+      <BigBanner />
+    </>
   );
 };
 

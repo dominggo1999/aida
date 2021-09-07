@@ -17,7 +17,10 @@ const Navlinks = ({ openSideNavbar }) => {
         <SearchIcon>
           <BiSearchAlt2 />
         </SearchIcon>
-        <Button onClick={openSideNavbar}>
+        <Button
+          nav
+          onClick={openSideNavbar}
+        >
           Menu
         </Button>
       </MenuButton>
@@ -38,7 +41,7 @@ const Navlinks = ({ openSideNavbar }) => {
           <SearchIcon>
             <BiSearchAlt2 />
           </SearchIcon>
-          <Button>
+          <Button nav>
             Subscribe
           </Button>
         </NavlinksWrapper>

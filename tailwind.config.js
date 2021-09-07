@@ -14,6 +14,9 @@ module.exports = {
         'sans-pro': ['Source Sans Pro', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
+      boxShadow: {
+        button: '14px 14px 36px rgba(85, 85, 85, 0.3)',
+      },
     },
   },
   plugins: [],

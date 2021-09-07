@@ -25,19 +25,22 @@ const Navbar = () => {
 
   useEffect(() => {
     let pScroll = prevScroll;
+    let initial = true;
     const toggleNavbarOnScroll = (e) => {
       const currentScroll = window.pageYOffset;
 
-      if(currentScroll <= pScroll) {
+      if(initial) {
         setShowNavbar(true);
+        initial = false;
+      }else{
+        if(currentScroll <= pScroll) {
+          setShowNavbar(true);
+        } else if (currentScroll > pScroll) {
+          setShowNavbar(false);
+        }
+        pScroll = currentScroll;
+        setPrevScroll(pScroll);
       }
-
-      if(currentScroll > pScroll) {
-        setShowNavbar(false);
-      }
-
-      pScroll = currentScroll;
-      setPrevScroll(pScroll);
     };
 
     const closeSidebarOnLargeScreen = (e) => {
