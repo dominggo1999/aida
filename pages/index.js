@@ -1,10 +1,11 @@
-import tw from 'twin.macro';
-import BigBanner from '../components/BigBanner/BigBanner';
+import MainBanner from '../containers/MainBanner/MainBanner';
+import CategoryCards from '../containers/CategoryCards/CategoryCards';
 
 const Homepage = () => {
   return (
     <>
-      <BigBanner />
+      <MainBanner />
+      <CategoryCards />
     </>
   );
 };

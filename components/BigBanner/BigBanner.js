@@ -4,20 +4,18 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
-import { BiSearchAlt2 } from 'react-icons/bi';
 import Container from '../Wrapper/Container';
 import {
   BigBannerWrapper, BannerCarousel, NavigationNext, NavigationPrev,
 } from './BigBanner.style';
 import Slide from './Slide';
-import { MainPosts } from '../../data/main';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, A11y, EffectFade]);
 
-const BigBanner = () => {
+const BigBanner = ({ posts }) => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
@@ -57,7 +55,7 @@ const BigBanner = () => {
             observer
             observeParents
           >
-            {MainPosts && MainPosts.map((item) => {
+            {posts && posts.map((item) => {
               return (
                 <SwiperSlide key={item.id}>
                   <Slide

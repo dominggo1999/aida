@@ -11,6 +11,7 @@ export const BigBannerWrapper = styled.main`
 
 export const BannerCarousel = styled.div`
   ${tw`
+    flex
     w-full
     flex-wrap
     relative

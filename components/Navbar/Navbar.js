@@ -8,7 +8,7 @@ import {
 import Navlinks from '../Navlinks/Navlinks';
 import Backdrop from '../Backdrop/Backdrop';
 import SideNavbar from '../SideNavbar/SideNavbar';
-import tailwindBreakpoints from '../../constants/tailwindBreakpoint';
+import { breakpoints } from '../../constants/tailwindBreakpoint';
 
 const Navbar = () => {
   const [showSideNavbar, setShowSideNavbar] = useState(false);
@@ -44,7 +44,7 @@ const Navbar = () => {
     };
 
     const closeSidebarOnLargeScreen = (e) => {
-      if(window.innerWidth >= tailwindBreakpoints.sm) {
+      if(window.innerWidth >= breakpoints.sm) {
         closeSideNavbar();
       }
     };
