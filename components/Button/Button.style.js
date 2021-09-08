@@ -5,6 +5,7 @@ export const Base = styled.button(({
 }) => {
   return [
     tw`
+    self-center
     text-lg 
     font-sans-pro 
     px-4 py-2 

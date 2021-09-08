@@ -13,9 +13,13 @@ module.exports = {
       fontFamily: {
         'sans-pro': ['Source Sans Pro', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        windsong: ['WindSong', 'cursive'],
       },
       boxShadow: {
         button: '14px 14px 36px rgba(85, 85, 85, 0.3)',
+      },
+      lineHeight: {
+        extra: '1.2',
       },
     },
   },

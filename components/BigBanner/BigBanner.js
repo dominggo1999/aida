@@ -54,6 +54,7 @@ const BigBanner = ({ posts }) => {
             }}
             observer
             observeParents
+            initialSlide={2}
           >
             {posts && posts.map((item) => {
               return (

@@ -5,7 +5,6 @@ export const CardWrapper = styled.div`
     relative
     rounded-2xl
     cursor-pointer
-
   `}
 
   height: 200px;
@@ -19,7 +18,6 @@ export const ImageWrapper = styled.div`
     h-full
     overflow-hidden
     rounded-2xl
-    shadow-button
   `}
 
   img{
