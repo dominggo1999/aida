@@ -28,12 +28,14 @@ const SubscribeNewsletter = () => {
                   type="email"
                   placeholder="Enter your email"
                 />
-                <Button
-                  nav
-                  type="input"
-                >
-                  Subscribe
-                </Button>
+                <div>
+                  <Button
+                    nav
+                    type="input"
+                  >
+                    Subscribe
+                  </Button>
+                </div>
               </form>
             </Input>
           </ContentBottom>

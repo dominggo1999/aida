@@ -6,4 +6,9 @@ export const categoryColors = {
   fashion: '#99CC8D',
   cooking: '#9A9D4B',
   art: '#0493EA',
+  gray: '#474747',
+  brand1: '#A3FFB2',
+  brand2: '#CEFCD6',
+  brand3: '#E5FFE9',
+  brand4: '#EFFFF2',
 };

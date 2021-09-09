@@ -10,7 +10,6 @@ export const Field = styled.div`
   form{
     ${tw`
       flex
-      flex-wrap
       w-full
     `}
   }
@@ -19,7 +18,6 @@ export const Field = styled.div`
     ${tw`
       px-3
       py-5
-      w-full
       text-xl
       font-bold
       text-gray-3
