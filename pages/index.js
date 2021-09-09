@@ -1,6 +1,7 @@
 import MainBanner from '../containers/MainBanner/MainBanner';
 import CategoryCards from '../containers/CategoryCards/CategoryCards';
 import Welcome from '../components/Welcome/Welcome';
+import SubscribeNewsletter from '../components/SubscribeNewsletter/SubscribeNewsletter';
 
 const Homepage = () => {
   return (
@@ -8,6 +9,7 @@ const Homepage = () => {
       <MainBanner />
       <CategoryCards />
       <Welcome />
+      <SubscribeNewsletter />
     </>
   );
 };
