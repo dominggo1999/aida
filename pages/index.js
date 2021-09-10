@@ -2,6 +2,7 @@ import MainBanner from '../containers/MainBanner/MainBanner';
 import CategoryCards from '../containers/CategoryCards/CategoryCards';
 import Welcome from '../components/Welcome/Welcome';
 import SubscribeNewsletter from '../components/SubscribeNewsletter/SubscribeNewsletter';
+import EditorsPicked from '../containers/EditorsPicked/EditorsPicked';
 
 const Homepage = () => {
   return (
@@ -9,6 +10,7 @@ const Homepage = () => {
       <MainBanner />
       <CategoryCards />
       <Welcome />
+      <EditorsPicked />
       <SubscribeNewsletter />
     </>
   );
