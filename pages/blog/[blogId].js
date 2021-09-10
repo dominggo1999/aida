@@ -1,8 +1,7 @@
 const BlogDetail = () => {
   return (
-    <div>
-
-    </div>
+    <>
+    </>
   );
 };
 
