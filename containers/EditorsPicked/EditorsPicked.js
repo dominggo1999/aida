@@ -4,6 +4,7 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import short from 'short-uuid';
 import Container from '../../components/Wrapper/Container';
 import {
   EditorsPickedWrapper, Carousel, NavigationNext, NavigationPrev,
@@ -60,7 +61,7 @@ const EditorsPicked = () => {
           >
             {PickedPosts && PickedPosts.map((item) => {
               return (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={short.generate()}>
                   <Slide
                     post={item}
                   />

@@ -1,7 +1,5 @@
 import tw, { styled } from 'twin.macro';
 
-import { SwiperSlide } from 'swiper/react';
-
 export const CategoryCardsWrapper = styled.div`
   ${tw`
     flex w-full 

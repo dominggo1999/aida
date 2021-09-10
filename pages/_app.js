@@ -1,3 +1,4 @@
+import tw, { styled } from 'twin.macro';
 import GlobalStyles from '../styles/GlobalStyles';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';

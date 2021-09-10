@@ -4,9 +4,7 @@ export const HeaderWrapper = styled.div`
   ${tw`
     flex 
     w-full
-    mt-5
-    mb-16
-    md:mb-5
+    mb-10
   `}
 `;
 
