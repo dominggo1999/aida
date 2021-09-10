@@ -27,6 +27,7 @@ export const FooterTop = styled.div`
     w-full
     justify-between
     mb-10
+    items-center
   `}
 `;
 
@@ -36,9 +37,7 @@ export const Logo = styled.a`
     md:text-4xl
     font-poppins
     font-bold
-    mr-20
     cursor-pointer
-    mb-5
     md:mb-0
   `}
 `;

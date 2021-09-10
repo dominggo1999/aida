@@ -4,7 +4,6 @@ export const SubscribeNewsLetterWrapper = styled.div`
   ${tw`
     w-full 
     flex 
-    mt-10
     bg-brand-1
     justify-center
   `}
