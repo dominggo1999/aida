@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  CardWrapper, CardImage, CardContent, CardTitle, CardDate, CardTime, Test,
+  CardWrapper, CardImage, CardContent, CardTitle, CardDate, CardTime,
 } from './PostCard.style';
 import Button from '../Button/Button';
 import { capitalize } from '../../util/capitalize';

@@ -7,3 +7,10 @@ export const PostsGrid = styled.div`
     justify-between
   `}
 `;
+
+export const PostsListWithSidebar = styled(PostsGrid)`
+  ${tw`
+    w-full
+    xl:w-2/3
+  `}
+`;

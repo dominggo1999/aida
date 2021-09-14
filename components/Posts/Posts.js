@@ -1,7 +1,15 @@
 import React from 'react';
-import { PostsGrid } from './Posts.style';
+import { PostsGrid, PostsListWithSidebar } from './Posts.style';
 
-const Posts = ({ col, children }) => {
+const Posts = ({ col, children, withSidebar }) => {
+  if(withSidebar) {
+    return (
+      <PostsListWithSidebar>
+        {children}
+      </PostsListWithSidebar>
+    );
+  }
+
   const childrenWithColProps = children.map((child, index) => {
     return React.cloneElement(child, {
       col,
@@ -9,7 +17,7 @@ const Posts = ({ col, children }) => {
   });
 
   return (
-    <PostsGrid col={col}>
+    <PostsGrid>
       {childrenWithColProps}
     </PostsGrid>
   );
