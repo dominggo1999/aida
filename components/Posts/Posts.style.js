@@ -12,5 +12,7 @@ export const PostsListWithSidebar = styled(PostsGrid)`
   ${tw`
     w-full
     xl:w-2/3
+    pr-0
+    xl:pr-5
   `}
 `;

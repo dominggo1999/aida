@@ -1,6 +1,7 @@
 import BlogListHeader from '../../containers/BlogListHeader/BlogListHeader';
 import BlogList from '../../containers/BlogList/BlogList';
 import { popularPosts } from '../../data/popularPosts';
+import BlogListSidebar from '../../containers/BlogListSidebar/BlogListSidebar';
 
 const title = 'All articles';
 const num = 20;

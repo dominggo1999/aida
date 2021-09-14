@@ -8,3 +8,11 @@ export const BlogListWrapper = styled.div`
     my-20
   `}
 `;
+
+export const List = styled.div`
+  ${tw`
+    flex 
+    flex-wrap
+    w-full
+  `}
+`;
